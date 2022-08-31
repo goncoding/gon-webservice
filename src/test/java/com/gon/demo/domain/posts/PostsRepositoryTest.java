@@ -21,23 +21,23 @@ class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
-    @AfterEach
-    public void cleanup(){
-        postsRepository.deleteAll();
-    }
+//    @AfterEach
+//    public void cleanup(){
+//        postsRepository.deleteAll();
+//    }
 
     @Test
     @Commit
     void test01() throws Exception{
         //given
-        String title = "test 게시글";
-        String content = "테스트 본문";
+        String title = "test 게시글2";
+        String content = "테스트 본문2";
 
 
         postsRepository.save(Posts.builder()
                         .title(title)
                         .content(content)
-                        .author("gon@gmail.com")
+                        .author("gon2@gmail.com")
                         .build());
 
 

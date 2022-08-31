@@ -2,6 +2,7 @@ package com.gon.demo.service;
 
 import com.gon.demo.domain.posts.Posts;
 import com.gon.demo.domain.posts.PostsRepository;
+import com.gon.demo.web.dto.PostsListResponseDto;
 import com.gon.demo.web.dto.PostsResponseDto;
 import com.gon.demo.web.dto.PostsSaveRequestDto;
 import com.gon.demo.web.dto.PostsUpdateRequestDto;
@@ -9,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,13 +44,20 @@ public class PostsService {
     }
 
     @Transactional(readOnly = true)
-    public List<PostsResponseDto> findAllDesc(){
+    public List<PostsListResponseDto> findAllDesc(){
 
-        return postsRepository.findAllDesc().stream().map(PostsResponseDto::new)
+        return postsRepository.findAllDesc().stream().map(PostsListResponseDto::new)
                 .collect(Collectors.toList());
     }
 
+    @Transactional
+    public void deleteById(Long id){
+        Posts posts = postsRepository.findById(id).orElseThrow(() ->
+                new IllegalArgumentException("해당 게시물이 없습니다. id=" + id));
 
+        postsRepository.delete(posts);
+
+        }
 
 
 
