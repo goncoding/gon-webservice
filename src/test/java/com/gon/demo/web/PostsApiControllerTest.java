@@ -2,8 +2,7 @@ package com.gon.demo.web;
 
 import com.gon.demo.domain.posts.Posts;
 import com.gon.demo.domain.posts.PostsRepository;
-import com.gon.demo.web.dto.PostsSaveRequestDto;
-import org.assertj.core.api.Assertions;
+import com.gon.demo.web.dto.posts.PostsSaveRequestDto;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PostsApiControllerTest {
 
@@ -61,6 +60,7 @@ class PostsApiControllerTest {
 
     @Test
     public void Posts_등록된다() throws Exception{
+
         //given
         String title = "title";
         String content = "content";

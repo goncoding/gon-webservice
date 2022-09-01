@@ -1,4 +1,4 @@
-package com.gon.demo.web.dto;
+package com.gon.demo.web.dto.posts;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

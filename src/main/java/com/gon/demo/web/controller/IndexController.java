@@ -1,8 +1,8 @@
-package com.gon.demo.web;
+package com.gon.demo.web.controller;
 
 import com.gon.demo.service.PostsService;
-import com.gon.demo.web.dto.PostsListResponseDto;
-import com.gon.demo.web.dto.PostsResponseDto;
+import com.gon.demo.web.dto.posts.PostsListResponseDto;
+import com.gon.demo.web.dto.posts.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +14,6 @@ import java.util.List;
 @Controller
 @RequiredArgsConstructor
 public class IndexController {
-
     private final PostsService postsService;
 
     @GetMapping("/")
@@ -37,7 +36,6 @@ public class IndexController {
         model.addAttribute("post",dto);
         return "posts-update";
     }
-
 
 
 }

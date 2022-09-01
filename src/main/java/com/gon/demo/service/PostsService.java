@@ -2,10 +2,10 @@ package com.gon.demo.service;
 
 import com.gon.demo.domain.posts.Posts;
 import com.gon.demo.domain.posts.PostsRepository;
-import com.gon.demo.web.dto.PostsListResponseDto;
-import com.gon.demo.web.dto.PostsResponseDto;
-import com.gon.demo.web.dto.PostsSaveRequestDto;
-import com.gon.demo.web.dto.PostsUpdateRequestDto;
+import com.gon.demo.web.dto.posts.PostsListResponseDto;
+import com.gon.demo.web.dto.posts.PostsResponseDto;
+import com.gon.demo.web.dto.posts.PostsSaveRequestDto;
+import com.gon.demo.web.dto.posts.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
-package com.gon.demo.web;
+package com.gon.demo.web.controller;
 
-import com.gon.demo.web.dto.HelloResponseDto;
+import com.gon.demo.web.dto.posts.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +19,8 @@ public class HelloController {
 
         return new HelloResponseDto(name, amount);
     }
+
+
 
 
 

@@ -1,4 +1,4 @@
-package com.gon.demo.web.dto;
+package com.gon.demo.web.dto.posts;
 
 import com.gon.demo.domain.posts.Posts;
 import lombok.Builder;

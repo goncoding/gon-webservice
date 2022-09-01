@@ -1,13 +1,13 @@
-package com.gon.demo.web;
+package com.gon.demo.web.controller;
 
 import com.gon.demo.service.PostsService;
-import com.gon.demo.web.dto.PostsResponseDto;
-import com.gon.demo.web.dto.PostsSaveRequestDto;
-import com.gon.demo.web.dto.PostsUpdateRequestDto;
+import com.gon.demo.web.dto.posts.PostsResponseDto;
+import com.gon.demo.web.dto.posts.PostsSaveRequestDto;
+import com.gon.demo.web.dto.posts.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
 
 @Slf4j
 @RequiredArgsConstructor
